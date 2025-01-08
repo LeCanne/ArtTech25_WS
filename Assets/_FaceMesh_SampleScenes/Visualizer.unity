@@ -1174,7 +1174,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b1c1ab35dcfdbb64283f95ad8522f5e0, type: 2}
+  - {fileID: 2100000, guid: 0d3785cde70d7b448b1b599ce211f9a9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21a6d3ef9c8e4e4eb235ab71f2ff1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deviceName: USB Video
+  deviceName: FULL HD 1080P Webcam
   resolution: {x: 1920, y: 1080}
   frameRate: 30
   targetBuffer: {fileID: 8400000, guid: 63b85b8b6b37bc24894bc8ae88daa1dc, type: 2}
