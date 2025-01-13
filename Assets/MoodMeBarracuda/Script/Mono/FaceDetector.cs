@@ -115,7 +115,8 @@ namespace MoodMe
                 tensor = new Tensor(1, ImageNetworkHeight, ImageNetworkWidth, ChannelCount, tensorData);
                 DateTime timestamp;
                 timestamp = DateTime.Now;
-                output = engine.ExecuteAndWaitForCompletion(tensor);
+                engine.Execute(tensor);
+                output = engine.CopyOutput();
                 //Debug.Log("FACE DETECTOR INFERENCE TIME: " + (DateTime.Now - timestamp).TotalMilliseconds + " ms");
                 scores = engine.PeekOutput("scores");
                 boxes = engine.PeekOutput("boxes");
@@ -300,6 +301,8 @@ namespace MoodMe
 
         void OnDestroy()
         {
+            DisposeTexture(previewTexture);
+            DisposeTexture(_cropTexture);
             scores.Dispose();
             boxes.Dispose();
             output.Dispose();

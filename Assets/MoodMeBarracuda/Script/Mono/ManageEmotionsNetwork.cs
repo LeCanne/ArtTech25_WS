@@ -86,7 +86,8 @@ namespace MoodMe
             DateTime timestamp;
 
             timestamp = DateTime.Now;
-            output = engine.ExecuteAndWaitForCompletion(tensor);
+            engine.Execute(tensor);
+            output = engine.CopyOutput();
             //Debug.Log("EMOTIONS INFERENCE TIME: " + (DateTime.Now - timestamp).TotalMilliseconds + " ms");
             float[] results = output.data.Download(output.shape);
 
@@ -112,7 +113,10 @@ namespace MoodMe
 
         void OnDestroy()
         {
-            output.Dispose();
+            if (output != null)
+            {
+                output.Dispose();
+            }
             tensor.Dispose();
         }
 
