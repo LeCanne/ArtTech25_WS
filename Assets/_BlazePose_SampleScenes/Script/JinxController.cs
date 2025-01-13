@@ -3,10 +3,15 @@ using Mediapipe.BlazePose;
 using System.Collections;
 using Unity;
 using UnityEngine;
+using System;
 
-public class JinxController : Bonjour.UserController
+
+
+public  class JinxController : Bonjour.UserController
 {
-    bool feed;
+   [Header("JinxSpecs")]
+   public bool feed;
+   public GameObject newModel;
 
     protected override void Init()
     {
@@ -28,6 +33,7 @@ public class JinxController : Bonjour.UserController
     protected override void OnUserTimerStart(TimerData timer)
     {
         Debug.Log("STARTTIMER");
+         newModel.SetActive(true);
     }
 
     protected override void OnUserTimerEnd(TimerData timerdata)
@@ -35,6 +41,7 @@ public class JinxController : Bonjour.UserController
 
         Debug.Log("ENDTIMER");
         StartCoroutine(DoEndSequence());
+        newModel.SetActive(false);
     }
 
     public IEnumerator DoEndSequence()
