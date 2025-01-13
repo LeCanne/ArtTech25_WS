@@ -2239,12 +2239,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731097531}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f89534a691372041917d96bb6c5cc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poseController: {fileID: 2136744568}
+  poseController: {fileID: 0}
   poseTransforms:
   - {fileID: 1551610958}
   - {fileID: 1551610957}
@@ -2708,7 +2708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9db285a394f254a4890672ab05bf9a83, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.439
+      value: -2.624
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9db285a394f254a4890672ab05bf9a83, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2747,8 +2747,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1063094714816996356, guid: 9db285a394f254a4890672ab05bf9a83, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: -1063094714816996356, guid: 9db285a394f254a4890672ab05bf9a83, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.95
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9db285a394f254a4890672ab05bf9a83, type: 3}
       propertyPath: m_Name
@@ -2760,11 +2764,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5392390209365313541, guid: 9db285a394f254a4890672ab05bf9a83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02205
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5392390209365313541, guid: 9db285a394f254a4890672ab05bf9a83, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0102
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3631,8 +3635,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2136744570}
   - component: {fileID: 2136744569}
-  - component: {fileID: 2136744568}
   - component: {fileID: 2136744567}
+  - component: {fileID: 2136744571}
   m_Layer: 0
   m_Name: Visuallizer
   m_TagString: Untagged
@@ -3657,40 +3661,6 @@ MonoBehaviour:
   radius: 0.05
   fadeOutfactor: 0.95
   tracetype: 0
---- !u!114 &2136744568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136744566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6432d6c8063ed5647ae489e526bd161d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: {fileID: 8400000, guid: 63b85b8b6b37bc24894bc8ae88daa1dc, type: 2}
-  blazePoseModel: 0
-  poseThreshold: 0.75
-  humanScoreThreshold: 0.95
-  userHistorySize: 120
-  drawDebugBones: 1
-  drawDebugScore: 1
-  bonesIco: {fileID: 2800000, guid: 658a8dc08c199104ea23f709006b27b9, type: 3}
-  debugBoneIcoSize: 50
-  whichBufferToFilter: 3
-  landmarksToFilter: 0
-  filtertype: 1
-  Q: 0.000001
-  R: 0.01
-  beta: 0.5
-  minCutOff: 0.04
-  drawDebugFilteredBones: 1
-  bonesFilteredIco: {fileID: 2800000, guid: af8f45e4889ce5649aa26a1d15d139b7, type: 3}
-  debugFilteredBoneIcoSize: 50
-  debugFilteredBone3DSize: 0.05
-  timeout: 3
-  logTimerEvents: 0
 --- !u!114 &2136744569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3703,7 +3673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21a6d3ef9c8e4e4eb235ab71f2ff1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deviceName: USB2.0 PC CAMERA
+  deviceName: FULL HD 1080P Webcam
   resolution: {x: 1920, y: 1080}
   frameRate: 60
   targetBuffer: {fileID: 8400000, guid: 63b85b8b6b37bc24894bc8ae88daa1dc, type: 2}
@@ -3725,6 +3695,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136744571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136744566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03346e73520239489aa3e843336b255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 8400000, guid: 63b85b8b6b37bc24894bc8ae88daa1dc, type: 2}
+  blazePoseModel: 0
+  poseThreshold: 0.75
+  humanScoreThreshold: 0.95
+  userHistorySize: 120
+  drawDebugBones: 1
+  drawDebugScore: 1
+  bonesIco: {fileID: 2800000, guid: 658a8dc08c199104ea23f709006b27b9, type: 3}
+  debugBoneIcoSize: 50
+  whichBufferToFilter: 3
+  landmarksToFilter: 0
+  filtertype: 0
+  Q: 0.000001
+  R: 0.01
+  beta: 0.0001
+  minCutOff: 0.04
+  drawDebugFilteredBones: 0
+  bonesFilteredIco: {fileID: 2800000, guid: af8f45e4889ce5649aa26a1d15d139b7, type: 3}
+  debugFilteredBoneIcoSize: 50
+  debugFilteredBone3DSize: 0.05
+  timeout: 4
+  logTimerEvents: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
