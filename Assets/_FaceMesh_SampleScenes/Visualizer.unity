@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21a6d3ef9c8e4e4eb235ab71f2ff1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deviceName: FULL HD 1080P Webcam
+  deviceName: USB2.0 PC CAMERA
   resolution: {x: 1920, y: 1080}
   frameRate: 30
   targetBuffer: {fileID: 8400000, guid: 63b85b8b6b37bc24894bc8ae88daa1dc, type: 2}
