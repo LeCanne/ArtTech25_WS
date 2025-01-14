@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Scene_Chambre_Jinx_02.ma
-//Last modified: Tue, Jan 14, 2025 05:27:42 PM
+//Last modified: Tue, Jan 14, 2025 05:40:33 PM
 //Codeset: 1252
 requires maya "2023";
 requires -nodeType "RedshiftOptions" -nodeType "RedshiftPostEffects" -nodeType "RedshiftPhysicalLight"
@@ -16,13 +16,13 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202211021031-847a9f9623";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "D46CE0C3-43F1-C679-6E1A-9994913769B7";
+fileInfo "UUID" "E7749E60-4743-968B-575C-89A6B6E78498";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "A6D22384-4C36-6FB3-70E4-DB9A909B969E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.075225425326680195 0.32644725912605732 2.3917968996559038 ;
-	setAttr ".r" -type "double3" 2.3999999999999959 750.399999999991 1.1523566216298681e-16 ;
+	setAttr ".t" -type "double3" 0.57572811764926757 0.78446397243921195 2.508866958689802 ;
+	setAttr ".r" -type "double3" -9.6000000000001009 763.19999999998902 0 ;
 	setAttr ".rpt" -type "double3" 1.7829179420928272e-15 1.0249556601883845e-15 -1.4009717901108762e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "D33E8692-45A7-8EC2-0EB6-A5AD5ED8033D";
@@ -30,7 +30,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr ".rnd" no;
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".ncp" 0.001;
-	setAttr ".coi" 1.7816911015777952;
+	setAttr ".coi" 2.2990352883311713;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3714,7 +3714,7 @@ createNode mesh -n "head_upShape" -p "head_up";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.501665415700149 0.49959912896156311 ;
+	setAttr ".pv" -type "double2" 0.50166541337966919 0.49959912896156311 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -8492,6 +8492,7 @@ createNode transform -n "sweep1" -p "jouet";
 createNode mesh -n "sweepShape1" -p "sweep1";
 	rename -uid "13F06186-4FD6-CEB2-0E98-0D8C26CB6568";
 	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr ".pv" -type "double2" 0.69820658072691277 0.16685599088668823 ;
@@ -29559,6 +29560,13 @@ createNode polyTweakUV -n "polyTweakUV56";
 		 0.033346497 0.0076418165 0.032742351 0.0010808706 0.036465727 0.0018132757 0.036539219
 		 0.0013840199 0.034421764 0.0052548591 0.031162098 0.0014028214 0.0311662 0.001792388
 		 0.033243708 0.0064476668 0.033153139 0.0058512334;
+createNode groupId -n "groupId36";
+	rename -uid "12297094-4CA6-9915-77F7-3C840C8C0C30";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts21";
+	rename -uid "8CBB179E-4672-35CF-EEC4-6AAB815C6A66";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 1 "f[0:143]";
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -av -cb on ".ihi";
@@ -29819,6 +29827,9 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".hwel";
 select -ne :ikSystem;
 	setAttr -s 3 ".sol";
+select -ne :modelPanel4ViewSelectedSet;
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 connectAttr "polyTweakUV18.out" "etagereShape.i";
 connectAttr "polyTweakUV18.uvtk[0]" "etagereShape.uvst[0].uvtw";
 connectAttr "polyTweakUV8.out" "tablShape2.i";
@@ -29853,7 +29864,9 @@ connectAttr "polyTweakUV49.out" "main_arriere_LShape.i";
 connectAttr "polyTweakUV49.uvtk[0]" "main_arriere_LShape.uvst[0].uvtw";
 connectAttr "polyTweakUV50.out" "sweepShape3.i";
 connectAttr "polyTweakUV50.uvtk[0]" "sweepShape3.uvst[0].uvtw";
-connectAttr "polyTweakUV51.out" "sweepShape1.i";
+connectAttr "groupId36.id" "sweepShape1.iog.og[0].gid";
+connectAttr ":modelPanel4ViewSelectedSet.mwc" "sweepShape1.iog.og[0].gco";
+connectAttr "groupParts21.og" "sweepShape1.i";
 connectAttr "polyTweakUV51.uvtk[0]" "sweepShape1.uvst[0].uvtw";
 connectAttr "polyTweakUV52.out" "pCubeShape14.i";
 connectAttr "polyTweakUV52.uvtk[0]" "pCubeShape14.uvst[0].uvtw";
@@ -30978,6 +30991,8 @@ connectAttr "polyLayoutUV33.out" "polyTweakUV54.ip";
 connectAttr "polyLayoutUV34.out" "polyTweakUV55.ip";
 connectAttr "polyTweakUV44.out" "polyLayoutUV35.ip";
 connectAttr "polyLayoutUV35.out" "polyTweakUV56.ip";
+connectAttr "polyTweakUV51.out" "groupParts21.ig";
+connectAttr "groupId36.id" "groupParts21.gi";
 connectAttr "RIGG_05_33:asRedSG.pa" ":renderPartition.st" -na;
 connectAttr "RIGG_05_33:asRed2SG.pa" ":renderPartition.st" -na;
 connectAttr "RIGG_05_33:asGreenSG.pa" ":renderPartition.st" -na;
