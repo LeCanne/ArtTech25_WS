@@ -943,6 +943,25 @@ MonoBehaviour:
   minSolidAngle:
     m_OverrideState: 1
     m_Value: 4
+--- !u!114 &-1428427594034560326
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417fcad16f7758644b487f1b3ed117b8, type: 3}
+  m_Name: ImpactFrameEffect
+  m_EditorClassIdentifier: 
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  threshold:
+    m_OverrideState: 1
+    m_Value: 0.5
 --- !u!114 &-1016694868962581565
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1047,6 +1066,7 @@ MonoBehaviour:
   - {fileID: -1726107102899243060}
   - {fileID: -9133632145656399188}
   - {fileID: 1334283214802458842}
+  - {fileID: -1428427594034560326}
 --- !u!114 &428300750119964962
 MonoBehaviour:
   m_ObjectHideFlags: 3
