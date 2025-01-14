@@ -726,8 +726,8 @@ MonoBehaviour:
   m_FrameSpace: 0
   m_AnchorPositionOverride: {fileID: 0}
   m_AnchorPositionOffset: {x: 0, y: 0, z: 0}
-  m_Yaw: 49.920006
-  m_Pitch: -9.449995
+  m_Yaw: 49.35694
+  m_Pitch: -8.854635
   m_Roll: -14.549988
 --- !u!114 &467299281
 MonoBehaviour:
@@ -1081,10 +1081,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6660110459016123366, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 1487467590}
-    - targetCorrespondingSourceObject: {fileID: 6660110459016123366, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 314402049}
+    - targetCorrespondingSourceObject: {fileID: 6660110459016123366, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 1487467590}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6195505109993420133, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
       insertIndex: -1
@@ -3288,6 +3288,11 @@ Transform:
   - {fileID: 1521465062}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1824632953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 68af9f6b243006b4aa24fc8f894e338e, type: 3}
+  m_PrefabInstance: {fileID: 19423522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054740336
 GameObject:
   m_ObjectHideFlags: 0
@@ -3417,7 +3422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21a6d3ef9c8e4e4eb235ab71f2ff1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deviceName: FULL HD 1080P Webcam
+  deviceName: 
   resolution: {x: 1920, y: 1080}
   frameRate: 60
   targetBuffer: {fileID: 8400000, guid: 63b85b8b6b37bc24894bc8ae88daa1dc, type: 2}
@@ -3474,7 +3479,7 @@ MonoBehaviour:
   timeout: 4
   logTimerEvents: 1
   feed: 0
-  newModel: {fileID: 0}
+  newModel: {fileID: 1824632953}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
