@@ -934,6 +934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enviro 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9165854858622508135, guid: c7d34e188f658f547896725cd2ceb448, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2730,9 +2734,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2682928787155769157, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5697528746186122681, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
       propertyPath: m_Name
       value: --- Player ---
+      objectReference: {fileID: 0}
+    - target: {fileID: 5697528746186122681, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7584765564693353665, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2774,11 +2786,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8277577278204153246, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 68af9f6b243006b4aa24fc8f894e338e, type: 3}
+    - target: {fileID: 8277577278204153246, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:LeftArm'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform
+        'mixamorig:LeftArm'\n\tTransform 'mixamorig:LeftShoulder'\n\tFrom animation
+        clip 'Armature_IPLACEHOLDER'"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
+--- !u!95 &372469321489321871 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8277577278204153246, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
+  m_PrefabInstance: {fileID: 372469321489321870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8811884141179669826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2836,6 +2865,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 315612909}
     - target: {fileID: 7261749123534652484, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
+      propertyPath: startTimer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7261749123534652484, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
       propertyPath: punchScreen
       value: 
       objectReference: {fileID: 172606704}
@@ -2852,9 +2885,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 250857148}
     - target: {fileID: 7261749123534652484, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
+      propertyPath: JinxControllerAnim
+      value: 
+      objectReference: {fileID: 372469321489321871}
+    - target: {fileID: 7261749123534652484, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
       propertyPath: BillBoardExpression
       value: 
       objectReference: {fileID: 314402048}
+    - target: {fileID: 8680257420770442723, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
+      propertyPath: deviceName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9153425104111701324, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
       propertyPath: emotionsAnimator
       value: 

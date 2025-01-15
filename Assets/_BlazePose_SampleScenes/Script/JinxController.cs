@@ -16,6 +16,7 @@ public  class JinxController : Bonjour.UserController
     public GameObject textOnBoarding;
     public Animator animatorTitleCard;
     public Animator punchScreen;
+    public Animator JinxControllerAnim;
 
     protected override void Init()
     {
@@ -59,14 +60,18 @@ public  class JinxController : Bonjour.UserController
     public IEnumerator DoEndSequence()
     {
         punchScreen.gameObject.SetActive(true);
+        JinxControllerAnim.Play("Armature|Punch");
         punchScreen.Play("A_punch");
         yield return new WaitForSeconds(2);
         animatorTitleCard.Play("A_logoStart");
         yield return new WaitForSeconds(1);
+        JinxControllerAnim.SetTrigger("PunchTrigger");
         punchScreen.gameObject.SetActive(false);
-        feed = false;
+        
         textOnBoarding.SetActive(true);
         newModel.SetActive(false);
+        yield return new WaitForSeconds(3f);
+        feed = false;
         yield return null;
     }
 
