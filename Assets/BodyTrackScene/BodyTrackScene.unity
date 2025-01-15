@@ -191,6 +191,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73411379}
   m_CullTransparentMesh: 1
+--- !u!95 &172606704 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1108000425047241295, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
+  m_PrefabInstance: {fileID: 630512709}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &250857148 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4219464481222147508, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
@@ -527,6 +532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background2D_PremierPlan
       objectReference: {fileID: 0}
+    - target: {fileID: 3949295972355567878, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8211288412865602676, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -571,6 +580,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1304602642}
+    - target: {fileID: 9057134358644881068, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -616,9 +629,9 @@ MonoBehaviour:
   m_FrameSpace: 0
   m_AnchorPositionOverride: {fileID: 0}
   m_AnchorPositionOffset: {x: 0, y: 0, z: 0}
-  m_Yaw: -73.14
-  m_Pitch: 51.419994
-  m_Roll: 0.000011042167
+  m_Yaw: -74.708565
+  m_Pitch: 51.68336
+  m_Roll: 0.000008281624
 --- !u!114 &821540855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,9 +1286,9 @@ MonoBehaviour:
   m_FrameSpace: 0
   m_AnchorPositionOverride: {fileID: 0}
   m_AnchorPositionOffset: {x: 0, y: 0, z: 0}
-  m_Yaw: 160.00006
-  m_Pitch: 0
-  m_Roll: -0.00000010710562
+  m_Yaw: 159.54918
+  m_Pitch: -0.87267655
+  m_Roll: -0.00000008006049
 --- !u!114 &1437358207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1651,9 +1664,9 @@ MonoBehaviour:
   m_FrameSpace: 0
   m_AnchorPositionOverride: {fileID: 0}
   m_AnchorPositionOffset: {x: 0, y: 0, z: 0}
-  m_Yaw: -160.00005
-  m_Pitch: 0
-  m_Roll: -0.00000021421124
+  m_Yaw: -160.44614
+  m_Pitch: -0.87043136
+  m_Roll: -0.00000021349462
 --- !u!114 &1521465064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2738,7 +2751,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 315612909}
     - target: {fileID: 7261749123534652484, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
+      propertyPath: punchScreen
+      value: 
+      objectReference: {fileID: 172606704}
+    - target: {fileID: 7261749123534652484, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
+      propertyPath: textOnBoarding
+      value: 
+      objectReference: {fileID: 314402048}
+    - target: {fileID: 7261749123534652484, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
       propertyPath: animatorBillboard
+      value: 
+      objectReference: {fileID: 250857148}
+    - target: {fileID: 7261749123534652484, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
+      propertyPath: animatorTitleCard
       value: 
       objectReference: {fileID: 250857148}
     - target: {fileID: 7261749123534652484, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}

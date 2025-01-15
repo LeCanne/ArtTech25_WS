@@ -11,9 +11,11 @@ public  class JinxController : Bonjour.UserController
 {
    [Header("JinxSpecs")]
    public bool feed;
+    public bool startTimer;
    public GameObject newModel;
-    public GameObject BillBoardExpression;
-    public Animator animatorBillboard;
+    public GameObject textOnBoarding;
+    public Animator animatorTitleCard;
+    public Animator punchScreen;
 
     protected override void Init()
     {
@@ -23,6 +25,12 @@ public  class JinxController : Bonjour.UserController
     protected override void Update()
     {
         base.Update();
+
+        if(startTimer == true)
+        {
+            userTimer.StartTimer();
+            startTimer = false;
+        }
         if (HasUser() && feed == false)
         {
             
@@ -34,25 +42,31 @@ public  class JinxController : Bonjour.UserController
 
     protected override void OnUserTimerStart(TimerData timer)
     {
-        BillBoardExpression.SetActive(false);
+        textOnBoarding.SetActive(false);
         Debug.Log("STARTTIMER");
          newModel.SetActive(true);
     }
 
     protected override void OnUserTimerEnd(TimerData timerdata)
     {
-        BillBoardExpression.SetActive(true);
+        
         Debug.Log("ENDTIMER");
-        animatorBillboard.Play("A_logoStart");
+    
         StartCoroutine(DoEndSequence());
-        newModel.SetActive(false);
+       
     }
 
     public IEnumerator DoEndSequence()
     {
-        yield return new WaitForSeconds(5);
+        punchScreen.gameObject.SetActive(true);
+        punchScreen.Play("A_punch");
+        yield return new WaitForSeconds(2);
+        animatorTitleCard.Play("A_logoStart");
+        yield return new WaitForSeconds(1);
+        punchScreen.gameObject.SetActive(false);
         feed = false;
-        
+        textOnBoarding.SetActive(true);
+        newModel.SetActive(false);
         yield return null;
     }
 
