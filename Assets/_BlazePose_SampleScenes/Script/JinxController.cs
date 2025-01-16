@@ -16,8 +16,9 @@ public  class JinxController : Bonjour.UserController
     public GameObject textOnBoarding;
     public Animator animatorTitleCard;
     public Animator punchScreen;
+    public GameObject noPunchScreen;
     public Animator JinxControllerAnim;
-
+    public ButtonFunctions bT;
     protected override void Init()
     {
        base.Init();
@@ -31,6 +32,7 @@ public  class JinxController : Bonjour.UserController
         {
             userTimer.StartTimer();
             startTimer = false;
+           
         }
         if (HasUser() && feed == false)
         {
@@ -43,9 +45,12 @@ public  class JinxController : Bonjour.UserController
 
     protected override void OnUserTimerStart(TimerData timer)
     {
+        
         textOnBoarding.SetActive(false);
         Debug.Log("STARTTIMER");
          newModel.SetActive(true);
+
+
     }
 
     protected override void OnUserTimerEnd(TimerData timerdata)
@@ -60,14 +65,17 @@ public  class JinxController : Bonjour.UserController
     public IEnumerator DoEndSequence()
     {
         punchScreen.gameObject.SetActive(true);
+        noPunchScreen.gameObject.SetActive(false);
+        bT.SetBlend(0, 0, 0, 0, 100);
         JinxControllerAnim.Play("Armature|Punch");
-        punchScreen.Play("A_punch");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         animatorTitleCard.Play("A_logoStart");
         yield return new WaitForSeconds(1);
         JinxControllerAnim.SetTrigger("PunchTrigger");
         punchScreen.gameObject.SetActive(false);
-        
+        noPunchScreen.gameObject.SetActive(true);
+        bT.SetBlend(0, 0, 0, 0, 0);
+
         textOnBoarding.SetActive(true);
         newModel.SetActive(false);
         yield return new WaitForSeconds(3f);

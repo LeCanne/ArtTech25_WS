@@ -26,13 +26,13 @@ public class ButtonFunctions : MonoBehaviour
 
     public void Angry()
     {
-        SetBlend(0, 0, 100, 0, 0);
+        SetBlend(0, 100, 0, 0, 0);
         ExpressionAnimator.Play("A_VFX_jinxAngry");
     }
 
     public void Sad()
     {
-        SetBlend(0, 100, 0, 0, 0);
+        SetBlend(0, 0, 100, 0, 0);
         ExpressionAnimator.Play("A_VFX_jinxSad");
     }
 
