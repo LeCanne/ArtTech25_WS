@@ -134,7 +134,7 @@ namespace Bonjour
             }, out bool b, out bool bb);
 
             ProcessTouchPress(pointerData, true, true);
-            Debug.Log("detected");
+            
         }
 
         #region Hover Intent

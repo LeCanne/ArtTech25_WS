@@ -657,25 +657,30 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6660110459016123366, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 1877052809}
     - targetCorrespondingSourceObject: {fileID: 6660110459016123366, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
-      insertIndex: -1
+      insertIndex: 3
       addedObject: {fileID: 1452153865}
     - targetCorrespondingSourceObject: {fileID: 6660110459016123366, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 1792765650}
     - targetCorrespondingSourceObject: {fileID: 6660110459016123366, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
-      insertIndex: -1
+      insertIndex: 5
       addedObject: {fileID: 122987791}
     - targetCorrespondingSourceObject: {fileID: 6660110459016123366, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
-      insertIndex: -1
+      insertIndex: 6
       addedObject: {fileID: 1783206228}
     - targetCorrespondingSourceObject: {fileID: 6660110459016123366, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
-      insertIndex: -1
+      insertIndex: 7
       addedObject: {fileID: 797325623}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
+--- !u!137 &645374741 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5001258312303245546, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
+  m_PrefabInstance: {fileID: 372469321489321870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &652022753 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6660110459016123366, guid: 63e16ef60b35c1a469a3307e433439b9, type: 3}
@@ -1263,6 +1268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca7a16272e0bb0c44941f8410c774d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SkinnedMeshRenderer: {fileID: 645374741}
   ExpressionAnimator: {fileID: 742579690}
 --- !u!1 &1287564572
 GameObject:
