@@ -76,6 +76,7 @@ namespace Bonjour
                 handScreenPosition.z = 0.4f;
                 cursor.transform.position = Camera.main.ScreenToWorldPoint(handScreenPosition);
                 MoveCursorToScreenPos(handScreenPosition);
+                ClickAt(handScreenPosition);
 
                 //Grab Pointer Event Data and process raycast with button
                 PointerEventData l_data = new PointerEventData(EventSystem.current);
@@ -90,8 +91,13 @@ namespace Bonjour
                     //There is an hit, /grab obly btn in hit list
                     foreach(RaycastResult result in results)
                     {
+                        
                         if (result.gameObject.GetComponent<Button>() != null && result.gameObject.GetComponent<Button>().interactable)
+                        {
                             btnsList.Add(result.gameObject);
+                            
+                        }
+                           
                     }
                 }
 
@@ -123,10 +129,12 @@ namespace Bonjour
             Input.simulateMouseWithTouches = true;
             var pointerData = GetTouchPointerEventData(new Touch()
             {
+                
                 position = new Vector2(target.x, target.y),
             }, out bool b, out bool bb);
 
             ProcessTouchPress(pointerData, true, true);
+            Debug.Log("detected");
         }
 
         #region Hover Intent
@@ -149,7 +157,7 @@ namespace Bonjour
             cursorImage.material.SetFloat("_Completion", 0f);
             if (hoverIntentCompletion >= 1f)
             {
-                ClickAt(cursor.anchoredPosition);
+                ClickAt(cursor.rect.position);
             }
         }
         #endregion
