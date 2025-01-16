@@ -71,10 +71,10 @@ namespace Bonjour
 
                 //Get Hand position and convert to Recttransform Space to move cursor
                 // ! Remember MediaPipe landmark are in Mirror space so HandRight = HandLeft on MediaPipe Model
-                Vector2 handScreenPosition = UserController.Instance.whichBufferToFilter == Mediapipe.BlazePose.BlazePoseLandmarkFilters.WhichBufferToFilter.None ? UserController.Instance.GetHandScreenPosition(activeHand) : UserController.Instance.GetFilteredHandScreenPosition(activeHand);
-                handScreenPosition.y = Screen.height - handScreenPosition.y; //invert y axis on screen pos
-
-                cursor.anchoredPosition = handScreenPosition;
+                Vector3 handScreenPosition = UserController.Instance.whichBufferToFilter == Mediapipe.BlazePose.BlazePoseLandmarkFilters.WhichBufferToFilter.None ? UserController.Instance.GetHandScreenPosition(activeHand) : UserController.Instance.GetFilteredHandScreenPosition(activeHand);
+                handScreenPosition.y = (Screen.height - handScreenPosition.y); //invert y axis on screen pos
+                handScreenPosition.z = 0.4f;
+                cursor.transform.position = Camera.main.ScreenToWorldPoint(handScreenPosition);
                 MoveCursorToScreenPos(handScreenPosition);
 
                 //Grab Pointer Event Data and process raycast with button
