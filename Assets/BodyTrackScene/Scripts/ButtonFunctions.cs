@@ -55,7 +55,7 @@ public class ButtonFunctions : MonoBehaviour
 
     public void End()
     {
-
+        
         ExpressionAnimator.SetTrigger("emotionEnd");
     }
 

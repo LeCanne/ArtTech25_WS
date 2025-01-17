@@ -4,6 +4,8 @@ using System.Collections;
 using Unity;
 using UnityEngine;
 using System;
+using NUnit.Framework;
+using UnityEngine.UI;
 
 
 
@@ -19,6 +21,7 @@ public  class JinxController : Bonjour.UserController
     public GameObject noPunchScreen;
     public Animator JinxControllerAnim;
     public ButtonFunctions bT;
+    
     protected override void Init()
     {
        base.Init();
@@ -64,13 +67,18 @@ public  class JinxController : Bonjour.UserController
 
     public IEnumerator DoEndSequence()
     {
+        foreach(Button gameObj in bT.buttons)
+        {
+            
+            gameObj.interactable = false;
+        }
         punchScreen.gameObject.SetActive(true);
         noPunchScreen.gameObject.SetActive(false);
         
         bT.SetBlend(0, 0, 0, 0, 100);
         JinxControllerAnim.Play("Armature|Punch");
         yield return new WaitForSeconds(5);
-        Debug.Log("TUMARCHES OU PAS");
+      
         animatorTitleCard.Play("A_logoStart");
         yield return new WaitForSeconds(1);
         JinxControllerAnim.SetTrigger("PunchTrigger");
@@ -78,7 +86,12 @@ public  class JinxController : Bonjour.UserController
         noPunchScreen.gameObject.SetActive(true);
         
         bT.SetBlend(0, 0, 0, 0, 0);
-        
+        yield return new WaitForSeconds(2);
+        foreach (Button gameObj in bT.buttons)
+        {
+           
+            gameObj.interactable = true;
+        }
 
         textOnBoarding.SetActive(true);
         newModel.SetActive(false);
