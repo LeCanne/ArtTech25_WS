@@ -4,6 +4,7 @@ public class ButtonFunctions : MonoBehaviour
 {
     public SkinnedMeshRenderer SkinnedMeshRenderer;
     public Animator ExpressionAnimator;
+    public Animator GlitchAnimator;
     public AudioSource audioSource;
     
 
@@ -53,6 +54,7 @@ public class ButtonFunctions : MonoBehaviour
     public void SetBlend(float happy, float sad, float angry, float confused, float crazy)
     {
         audioSource.Play();
+        GlitchAnimator.Play("A_glitch");
         SkinnedMeshRenderer.SetBlendShapeWeight(0, happy);
         SkinnedMeshRenderer.SetBlendShapeWeight(1, sad);
         SkinnedMeshRenderer.SetBlendShapeWeight(2, angry);
