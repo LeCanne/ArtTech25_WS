@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 2862330055178352862}
   - component: {fileID: 7042306292653538831}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Happy_robotSinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1566,7 +1566,7 @@ GameObject:
   - component: {fileID: 4678356849844481580}
   - component: {fileID: 6945314309628086955}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Sad_poupeeClaggor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1699,7 +1699,7 @@ GameObject:
   - component: {fileID: 719129042007693389}
   - component: {fileID: 6842299374891807445}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Angry_pelucheVi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1832,7 +1832,7 @@ GameObject:
   - component: {fileID: 8989257271195596245}
   - component: {fileID: 4054414596087983768}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Confused_photoVanderSilcoJeunes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
