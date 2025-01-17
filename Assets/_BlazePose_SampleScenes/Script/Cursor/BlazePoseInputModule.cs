@@ -26,6 +26,7 @@ namespace Bonjour
         [Tooltip("To avoid avoid the cursos glitching (appearing/disapperaing) due to lost user we can use a history of user track and check the average over a certain number of frames")]
         public int historySize = 60 * 3;
         private List<int> hasUserList = new List<int>(); //HasUser bool are stroed in the array as int 0:false 1:true;
+        private Vector3 hand;
 
         
         protected override void Awake()
@@ -74,41 +75,51 @@ namespace Bonjour
                 Vector3 handScreenPosition = UserController.Instance.whichBufferToFilter == Mediapipe.BlazePose.BlazePoseLandmarkFilters.WhichBufferToFilter.None ? UserController.Instance.GetHandScreenPosition(activeHand) : UserController.Instance.GetFilteredHandScreenPosition(activeHand);
                 handScreenPosition.y = (Screen.height - handScreenPosition.y); //invert y axis on screen pos
                 handScreenPosition.z = 0.4f;
-                cursor.transform.position = Camera.main.ScreenToWorldPoint(handScreenPosition);
-                MoveCursorToScreenPos(handScreenPosition);
-                ClickAt(handScreenPosition);
-
-                //Grab Pointer Event Data and process raycast with button
-                PointerEventData l_data = new PointerEventData(EventSystem.current);
-                l_data.position = new Vector2(handScreenPosition.x, handScreenPosition.y);
-
-                List<RaycastResult> results = new List<RaycastResult>();
-                List<GameObject> btnsList = new List<GameObject>();
-                EventSystem.current.RaycastAll(l_data, results);
-
-                if (results.Count > 0)
+                if (!float.IsNaN(handScreenPosition.x)
+                    && !float.IsNaN(handScreenPosition.y))
                 {
-                    //There is an hit, /grab obly btn in hit list
-                    foreach(RaycastResult result in results)
+                    cursor.transform.position = Camera.main.ScreenToWorldPoint(handScreenPosition);
+                    hand = handScreenPosition;
+
+
+
+                    // MoveCursorToScreenPos(handScreenPosition);
+
+
+
+
+                    //Grab Pointer Event Data and process raycast with button
+                    PointerEventData l_data = new PointerEventData(EventSystem.current);
+                    l_data.position = new Vector2(handScreenPosition.x, handScreenPosition.y);
+
+                    List<RaycastResult> results = new List<RaycastResult>();
+                    List<GameObject> btnsList = new List<GameObject>();
+                    EventSystem.current.RaycastAll(l_data, results);
+
+                    if (results.Count > 0)
                     {
-                        
-                        if (result.gameObject.GetComponent<Button>() != null && result.gameObject.GetComponent<Button>().interactable)
+                        //There is an hit, /grab obly btn in hit list
+                        foreach (RaycastResult result in results)
                         {
-                            btnsList.Add(result.gameObject);
-                            
-                        }
-                           
-                    }
-                }
 
-                //Start/stop hoçver intent here
-                if (btnsList.Count > 0) // || results.Count > 0)
-                {
-                    hoverIntentTimer.StartTimer();
-                }
-                else
-                {
-                    hoverIntentTimer.StopTimer();
+                            if (result.gameObject.GetComponent<Button>() != null && result.gameObject.GetComponent<Button>().interactable)
+                            {
+                                btnsList.Add(result.gameObject);
+
+                            }
+
+                        }
+                    }
+
+                    //Start/stop hoçver intent here
+                    if (btnsList.Count > 0) // || results.Count > 0)
+                    {
+                        hoverIntentTimer.StartTimer();
+                    }
+                    else
+                    {
+                        hoverIntentTimer.StopTimer();
+                    }
                 }
             }
         }
@@ -157,7 +168,7 @@ namespace Bonjour
             cursorImage.material.SetFloat("_Completion", 0f);
             if (hoverIntentCompletion >= 1f)
             {
-                ClickAt(cursor.rect.position);
+                ClickAt(hand);
             }
         }
         #endregion
