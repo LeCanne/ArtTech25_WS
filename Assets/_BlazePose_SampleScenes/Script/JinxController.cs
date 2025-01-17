@@ -15,7 +15,7 @@ public  class JinxController : Bonjour.UserController
    public bool feed;
     public bool startTimer;
    public GameObject newModel;
-    public GameObject textOnBoarding;
+    //public GameObject textOnBoarding;
     public Animator animatorTitleCard;
     public Animator punchScreen;
     public GameObject noPunchScreen;
@@ -49,7 +49,7 @@ public  class JinxController : Bonjour.UserController
     protected override void OnUserTimerStart(TimerData timer)
     {
         
-        textOnBoarding.SetActive(false);
+        //textOnBoarding.SetActive(false);
         Debug.Log("STARTTIMER");
          newModel.SetActive(true);
 
@@ -93,7 +93,7 @@ public  class JinxController : Bonjour.UserController
             gameObj.interactable = true;
         }
 
-        textOnBoarding.SetActive(true);
+        //textOnBoarding.SetActive(true);
         newModel.SetActive(false);
         yield return new WaitForSeconds(3f);
         feed = false;
