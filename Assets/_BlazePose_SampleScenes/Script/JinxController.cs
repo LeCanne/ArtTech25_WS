@@ -66,7 +66,7 @@ public  class JinxController : Bonjour.UserController
     {
         punchScreen.gameObject.SetActive(true);
         noPunchScreen.gameObject.SetActive(false);
-        bT.gameObject.SetActive(false);
+        
         bT.SetBlend(0, 0, 0, 0, 100);
         JinxControllerAnim.Play("Armature|Punch");
         yield return new WaitForSeconds(5);
@@ -76,7 +76,7 @@ public  class JinxController : Bonjour.UserController
         JinxControllerAnim.SetTrigger("PunchTrigger");
         punchScreen.gameObject.SetActive(false);
         noPunchScreen.gameObject.SetActive(true);
-        bT.gameObject.SetActive(true);
+        
         bT.SetBlend(0, 0, 0, 0, 0);
         
 
