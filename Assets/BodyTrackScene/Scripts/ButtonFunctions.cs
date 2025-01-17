@@ -4,6 +4,7 @@ public class ButtonFunctions : MonoBehaviour
 {
     public SkinnedMeshRenderer SkinnedMeshRenderer;
     public Animator ExpressionAnimator;
+    public AudioSource audioSource;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -51,6 +52,7 @@ public class ButtonFunctions : MonoBehaviour
 
     public void SetBlend(float happy, float sad, float angry, float confused, float crazy)
     {
+        audioSource.Play();
         SkinnedMeshRenderer.SetBlendShapeWeight(0, happy);
         SkinnedMeshRenderer.SetBlendShapeWeight(1, sad);
         SkinnedMeshRenderer.SetBlendShapeWeight(2, angry);
