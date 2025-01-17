@@ -9,7 +9,7 @@ public class ButtonFunctions : MonoBehaviour
     public Animator GlitchAnimator;
     public AudioSource audioSource;
     public Button[] buttons;
-    private Button RealButton;
+    public Button RealButton;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
