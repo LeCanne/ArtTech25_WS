@@ -70,6 +70,7 @@ public  class JinxController : Bonjour.UserController
         bT.SetBlend(0, 0, 0, 0, 100);
         JinxControllerAnim.Play("Armature|Punch");
         yield return new WaitForSeconds(5);
+        Debug.Log("TUMARCHES OU PAS");
         animatorTitleCard.Play("A_logoStart");
         yield return new WaitForSeconds(1);
         JinxControllerAnim.SetTrigger("PunchTrigger");

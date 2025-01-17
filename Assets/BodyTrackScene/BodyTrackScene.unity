@@ -2158,7 +2158,7 @@ MonoBehaviour:
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
   activeHand: 1
-  timeout: 3
+  timeout: 1
   cursor: {fileID: 797325623}
   canvas: {fileID: 652022753}
   showCursor: 1
@@ -9021,27 +9021,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6392025816170788149, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
       propertyPath: m_LocalScale.x
-      value: -7.602152
+      value: -33.0686
       objectReference: {fileID: 0}
     - target: {fileID: 6392025816170788149, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.602152
+      value: 33.0686
       objectReference: {fileID: 0}
     - target: {fileID: 6392025816170788149, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7.602152
+      value: 33.0686
       objectReference: {fileID: 0}
     - target: {fileID: 6392025816170788149, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: -0.012
       objectReference: {fileID: 0}
     - target: {fileID: 6392025816170788149, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8592
+      value: 1.901
       objectReference: {fileID: 0}
     - target: {fileID: 6392025816170788149, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6298
+      value: -0.29282
       objectReference: {fileID: 0}
     - target: {fileID: 6392025816170788149, guid: 36eef1d7ae062e548b21f07d1fa4fd54, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -9421,6 +9421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: --- Game Systems ---
       objectReference: {fileID: 0}
+    - target: {fileID: 3422517355584719334, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7261749123534652484, guid: 41c924c0bb62fb94c9e9c568a58c8055, type: 3}
       propertyPath: bT
       value: 
@@ -9514,10 +9518,10 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1304602643}
+  - {fileID: 372469321489321870}
   - {fileID: 630512709}
   - {fileID: 1721778201}
   - {fileID: 2054740337}
-  - {fileID: 372469321489321870}
   - {fileID: 8811884141179669826}
   - {fileID: 1462000370}
   - {fileID: 1687640265}
