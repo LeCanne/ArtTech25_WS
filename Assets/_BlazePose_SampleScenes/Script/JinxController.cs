@@ -80,6 +80,7 @@ public  class JinxController : Bonjour.UserController
         yield return new WaitForSeconds(5);
       
         animatorTitleCard.Play("A_logoStart");
+        newModel.SetActive(false);
         yield return new WaitForSeconds(1);
         JinxControllerAnim.SetTrigger("PunchTrigger");
         punchScreen.gameObject.SetActive(false);
@@ -94,7 +95,7 @@ public  class JinxController : Bonjour.UserController
         }
 
         //textOnBoarding.SetActive(true);
-        newModel.SetActive(false);
+        //newModel.SetActive(false);
         yield return new WaitForSeconds(3f);
         feed = false;
         yield return null;

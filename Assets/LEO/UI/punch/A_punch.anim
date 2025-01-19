@@ -2489,7 +2489,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 2.2
-    functionName: eventAnim
+    functionName: punchAnimEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
