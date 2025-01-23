@@ -870,15 +870,15 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: ArtTechWS
-  metroPackageVersion: 
-  metroCertificatePath: 
+  metroPackageVersion: 1.0.0.0
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: MelLycLeoGui
+  metroCertificateIssuer: MelLycLeoGui
+  metroCertificateNotAfter: 80b90323f48bdc01
   metroApplicationDescription: ArtTechWS
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: AtTechWS_grp3_GuillaumeMelvinLycanLeo
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
